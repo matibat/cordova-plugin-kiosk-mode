@@ -81,7 +81,7 @@ public class KioskModeActivity extends CordovaActivity {
     }
 
     public void setAliasActivityEnabled(boolean enabled) {
-        String packageName = getPackageName();
+        String packageName = "com.ikatu.mirigi"; //getPackageName();
         // boolean enabled = !EngineManager.getEngineManager().isLauncherEnabled();
         getPackageManager().setComponentEnabledSetting(
             new ComponentName(
