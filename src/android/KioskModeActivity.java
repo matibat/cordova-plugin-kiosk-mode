@@ -65,12 +65,12 @@ public class KioskModeActivity extends CordovaActivity {
     protected void onPause() {
         super.onPause();
 
-        if (this.kioskModeEnabled) {
-            ActivityManager activityManager = (ActivityManager) this.getApplicationContext()
-                .getSystemService(Context.ACTIVITY_SERVICE);
+        // if (this.kioskModeEnabled) {
+        //     ActivityManager activityManager = (ActivityManager) this.getApplicationContext()
+        //         .getSystemService(Context.ACTIVITY_SERVICE);
 
-            activityManager.moveTaskToFront(getTaskId(), 0);
-        }
+        //     activityManager.moveTaskToFront(getTaskId(), 0);
+        // }
     }
 
     /**

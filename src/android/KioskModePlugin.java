@@ -86,8 +86,8 @@ public class KioskModePlugin extends CordovaPlugin {
         if (instance != null) {
             this.cordova.getActivity().runOnUiThread(() -> {
                 instance.setKioskModeEnabled(enabled);
-                instance.updateDeviceProvisioning();
-                instance.updateSystemUiVisibility();
+                // instance.updateDeviceProvisioning();
+                // instance.updateSystemUiVisibility();
                 instance.setAliasActivityEnabled(enabled);
             });
         }
