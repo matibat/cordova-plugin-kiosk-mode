@@ -78,6 +78,19 @@ public class KioskModeActivity extends CordovaActivity {
         this.kioskModeEnabled = enabled;
     }
 
+    public void setAliasActivityEnabled(boolean enabled) {
+        String packageName = getPackageName();
+        // boolean enabled = !EngineManager.getEngineManager().isLauncherEnabled();
+        getPackageManager().setComponentEnabledSetting(
+            new ComponentName(
+                packageName,
+                packageName + ".SetAsLauncher"
+            ),
+            enabled ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.DONT_KILL_APP
+        );
+    }
+
     public boolean getKioskModeEnabled() {
         return this.kioskModeEnabled;
     }
