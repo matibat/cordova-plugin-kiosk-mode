@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.*;
 import org.apache.cordova.*;
 import android.content.pm.PackageManager;
+import android.content.ComponentName;
 
 
 public class KioskModeActivity extends CordovaActivity {
